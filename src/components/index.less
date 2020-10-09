@@ -1,0 +1,96 @@
+.drag-modal-vue-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 0;
+    border-radius: 4px;
+    .drag-modal-vue-header {
+      background-color: white;
+      color: #333;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f3f3f3;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      &:hover {
+          cursor: move;
+      }
+    }
+    .drag-modal-vue-title {
+      font-size: 16px;
+      color: #333;
+    }
+    .drag-modal-vue-close {
+      width: 18px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .drag-modal-vue-main {
+      padding: 10px 15px 0 15px;
+    }
+    .drag-modal-vue-footer {
+      padding: 10px 15px;
+      text-align: right;
+    }
+  }
+.drag-modal-vue-modal-warp {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  .drag-modal-vue-modal-btn {
+    margin-left: 10px;
+    line-height: 1.499;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    height: 32px;
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+    border-color: #d9d9d9;
+    &:hover {
+      text-decoration: none;
+      background: #fff;
+      color: #40a9ff;
+      border-color: #40a9ff;
+    }
+    &:active {
+      color: #096dd9;
+      outline: 0;
+      box-shadow: none;
+      text-decoration: none;
+      background: #fff;
+      border-color: #096dd9;
+    }
+    &:focus {
+      color: #096dd9;
+      text-decoration: none;
+      background: #fff;
+      outline: 0;
+      border-color: #096dd9;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "drag-modal-vue",
+  "version": "1.1.0",
+  "sideEffects": [
+    "*.less",
+    "*.css"
+  ],
+  "description": "a drag layer in Vue",
+  "main": "./lib/main.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [
+    "vue可拖拽的弹层",
+    "drag-modal-vue",
+    "可拖拽弹层"
+  ],
+  "author": "sorryljt",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "9.8.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.3.0",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.1",
+    "mini-css-extract-plugin": "^0.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss-loader": "^4.0.3",
+    "url-loader": "^4.1.0",
+    "vue-loader": "^15.9.3",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "vue": "^2.6.12"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie <= 8",
+    "last 2 versions",
+    "> 1%",
+    "iOS >= 7",
+    "Android >= 4.0"
+  ]
+}
