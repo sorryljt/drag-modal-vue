@@ -49,3 +49,6 @@ Vue.use(dragModalVue);
 | :----:| :----: | :----: |:----: |
 | footer | 弹窗页脚 | 确认取消按钮(建议使用自己UI库按钮) | vNode
 
+#### 代码贡献
+[ZSJ1314](https://github.com/ZSJ1314)、[sorryljt](https://github.com/sorryljt)
+
