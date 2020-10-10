@@ -1,7 +1,7 @@
 <template>
   <div
-    class="drag-modal-vue-modal-warp" 
-    v-show="visible" 
+    class="drag-modal-vue-modal-warp"
+    v-show="visible"
     :style="{ background: mask ? 'rgba(0, 0, 0, 0.5)' : 'transparent', 'z-index': zIndex }"
     @click.self="onClickMask"
   >
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import mainContent from './mainContent'
+import mainContent from './mainContent.vue';
 
 export default {
   name: 'dragModalVue',
@@ -33,45 +33,45 @@ export default {
     title: {
       // 标题
       type: String,
-      default: ''
+      default: '',
     },
     width: {
       // 宽度
       type: [String, Number],
-      default: 500
+      default: 500,
     },
     height: {
       // 内部高度
       type: Number,
-      default: 0
+      default: 0,
     },
     mask: {
       // 是否显示遮罩
       type: Boolean,
-      default: true
+      default: true,
     },
     maskClosable: {
       // 点击蒙层是否允许关闭
       type: Boolean,
-      default: true
+      default: true,
     },
     zIndex: {
       // 内部高度
       type: Number,
-      default: 10
+      default: 10,
     },
     visible: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   components: {
-    mainContent
+    mainContent,
   },
-  data () {
+  data() {
     return {
-      modalId: 'ufModal'
-    }
+      modalId: 'ufModal',
+    };
   },
   watch: {
   },
@@ -79,38 +79,38 @@ export default {
     /**
      * @description: 关闭 并发送cancel事件
      */
-    close () {
-      this.$emit('cancel')
-      this.$emit('afterClose')
-      this.$emit('update:visible', false)
-      this.$emit('close', false)
+    close() {
+      this.$emit('cancel');
+      this.$emit('afterclose');
+      this.$emit('update:visible', false);
+      this.$emit('close', false);
     },
     /**
      * @description:
      */
-    confirm () {
-      this.$emit('ok')
-      this.close()
+    confirm() {
+      this.$emit('ok');
+      this.close();
     },
-    onClickMask () {
+    onClickMask() {
       if (this.maskClosable) {
-        this.close()
+        this.close();
       }
     },
-    cancel () {
-      this.close()
-    }
+    cancel() {
+      this.close();
+    },
   },
   model: {
     prop: 'visible',
-    event: 'close'
+    event: 'close',
   },
-  created () {
+  created() {
     if (this.visible) {
-      this.modalId = 'ufModal_' + parseInt(Math.random() * 1e10)
+      this.modalId = `ufModal_${parseInt(Math.random() * 1e10)}`;
     }
-  }
-}
+  },
+};
 </script>
 <style src="./index.less">
 </style>

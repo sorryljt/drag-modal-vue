@@ -17,6 +17,11 @@ module.exports = {
             loader: 'vue-loader'
             },
             {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: ['babel-loader', 'eslint-loader'],
+            },
+            {
                 test: /\.less$/,
                 use: [
                     MiniCssExtractPlugin.loader,
