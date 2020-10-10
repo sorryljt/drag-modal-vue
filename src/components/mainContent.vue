@@ -6,7 +6,7 @@
   >
     <div class="drag-modal-vue-header" @mousedown="mousedown">
       <div class="drag-modal-vue-title">{{ title }}</div>
-      <img class="drag-modal-vue-close" alt="无图片" :src="closeImg" @click.stop="close"/>
+      <slot name="close"></slot>
     </div>
     <div class="drag-modal-vue-main" :style="{ height: height === 0 ? 'auto' : height + 'px' }">
       <slot></slot>
@@ -17,7 +17,6 @@
   </div>
 </template>
 <script>
-import closeImg from '../assest/close.png';
 
 export default {
   name: 'mainContent',
@@ -46,7 +45,6 @@ export default {
   data() {
     return {
       modalEl: '', // 保存的modal元素实例
-      closeImg, // 关闭按钮图标
     };
   },
   methods: {

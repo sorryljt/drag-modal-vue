@@ -14,6 +14,11 @@
         @cancel="cancel"
     >
       <slot></slot>
+      <template v-slot:close>
+        <slot name="close">
+          <img class="drag-modal-vue-close" alt="无图片" :src="closeImg" @click.stop="close"/>
+        </slot>
+      </template>
       <template v-slot:footer>
         <slot name="footer">
           <button class="drag-modal-vue-modal-btn" @click="confirm">确 定</button>
@@ -26,6 +31,7 @@
 
 <script>
 import mainContent from './mainContent.vue';
+import closeImg from '../assest/close.png';
 
 export default {
   name: 'dragModalVue',
@@ -71,6 +77,7 @@ export default {
   data() {
     return {
       modalId: 'ufModal',
+      closeImg, // 关闭按钮图标
     };
   },
   watch: {
